@@ -39,12 +39,12 @@ export function ExperienceSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="text-center mb-12 lg:mb-16"
+          className="text-center mb-8 sm:mb-12 lg:mb-16"
         >
           <h2 className="heading-section">Experience</h2>
         </motion.div>
 
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-3xl mx-auto space-y-8 sm:space-y-12">
           {experiences.map((exp, index) => (
             <motion.div
               key={index}
@@ -53,23 +53,23 @@ export function ExperienceSection() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="relative"
             >
-              <div className="flex gap-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-                  <Briefcase className="w-5 h-5 text-primary-foreground" />
+              <div className="flex gap-3 sm:gap-4">
+                <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 bg-primary rounded-full flex items-center justify-center">
+                  <Briefcase className="w-4 h-4 sm:w-5 sm:h-5 text-primary-foreground" />
                 </div>
-                <div className="flex-1">
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-                    <h3 className="text-xl font-semibold font-sans">{exp.title}</h3>
-                    <span className="text-sm text-muted-foreground">{exp.period}</span>
+                <div className="flex-1 min-w-0">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2 gap-1 md:gap-0">
+                    <h3 className="text-lg sm:text-xl font-semibold font-sans">{exp.title}</h3>
+                    <span className="text-xs sm:text-sm text-muted-foreground flex-shrink-0">{exp.period}</span>
                   </div>
-                  <p className="text-muted-foreground mb-4">
+                  <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">
                     {exp.company} · {exp.location}
                   </p>
-                  <ul className="space-y-3">
+                  <ul className="space-y-2 sm:space-y-3">
                     {exp.highlights.map((highlight, idx) => (
-                      <li key={idx} className="flex gap-3 text-body">
-                        <span className="text-primary mt-1.5">•</span>
-                        <span>{highlight}</span>
+                      <li key={idx} className="flex gap-2 sm:gap-3 text-body">
+                        <span className="text-primary mt-1 sm:mt-1.5 flex-shrink-0">•</span>
+                        <span className="flex-1">{highlight}</span>
                       </li>
                     ))}
                   </ul>

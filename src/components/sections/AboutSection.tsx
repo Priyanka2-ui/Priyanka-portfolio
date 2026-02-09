@@ -9,7 +9,7 @@ export function AboutSection() {
   return (
     <section id="about" className="section-padding">
       <div className="section-container">
-        <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="grid md:grid-cols-2 gap-8 sm:gap-12 lg:gap-20 items-center">
           <motion.div
             ref={ref}
             initial={{ opacity: 0, x: -30 }}

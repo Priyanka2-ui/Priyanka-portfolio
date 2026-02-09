@@ -37,15 +37,15 @@ export function ContactSection() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     await new Promise((resolve) => setTimeout(resolve, 1000));
-    
+
     toast({
       title: "Message sent!",
       description: "Thank you for reaching out. I'll get back to you soon.",
     });
-    
+
     setIsSubmitting(false);
     (e.target as HTMLFormElement).reset();
   };
@@ -58,21 +58,21 @@ export function ContactSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="text-center mb-12 lg:mb-16"
+          className="text-center mb-8 sm:mb-12 lg:mb-16"
         >
-          <h2 className="heading-section mb-4">Get in Touch</h2>
+          <h2 className="heading-section mb-3 sm:mb-4">Get in Touch</h2>
           <p className="text-body max-w-xl mx-auto">
             Interested in working together? Feel free to reach out.
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 max-w-5xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 max-w-5xl mx-auto">
           {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="space-y-6"
+            className="space-y-4 sm:space-y-6"
           >
             {contactInfo.map((item) => (
               <a
@@ -80,14 +80,14 @@ export function ContactSection() {
                 href={item.href}
                 target={item.href.startsWith("http") ? "_blank" : undefined}
                 rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                className="flex items-center gap-4 p-4 rounded-xl border border-border bg-card hover:bg-secondary/50 transition-colors group"
+                className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl border border-border bg-card hover:bg-secondary/50 transition-colors group"
               >
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                  <item.icon className="w-5 h-5 text-foreground" />
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <item.icon className="w-4 h-4 sm:w-5 sm:h-5 text-foreground" />
                 </div>
-                <div>
-                  <p className="text-sm text-muted-foreground">{item.label}</p>
-                  <p className="font-medium group-hover:text-primary transition-colors">
+                <div className="min-w-0 flex-1">
+                  <p className="text-xs sm:text-sm text-muted-foreground">{item.label}</p>
+                  <p className="font-medium text-sm sm:text-base group-hover:text-primary transition-colors truncate">
                     {item.value}
                   </p>
                 </div>
@@ -101,7 +101,7 @@ export function ContactSection() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.3 }}
             onSubmit={handleSubmit}
-            className="space-y-6"
+            className="space-y-4 sm:space-y-6"
           >
             <div>
               <Input
@@ -109,7 +109,7 @@ export function ContactSection() {
                 name="name"
                 placeholder="Your Name"
                 required
-                className="h-12 rounded-lg"
+                className="h-11 sm:h-12 rounded-lg text-sm sm:text-base"
               />
             </div>
             <div>
@@ -118,7 +118,7 @@ export function ContactSection() {
                 name="email"
                 placeholder="Your Email"
                 required
-                className="h-12 rounded-lg"
+                className="h-11 sm:h-12 rounded-lg text-sm sm:text-base"
               />
             </div>
             <div>
@@ -127,7 +127,7 @@ export function ContactSection() {
                 placeholder="Your Message"
                 required
                 rows={5}
-                className="rounded-lg resize-none"
+                className="rounded-lg resize-none text-sm sm:text-base"
               />
             </div>
             <Button

@@ -48,25 +48,25 @@ export function ProjectsSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="text-center mb-12 lg:mb-16"
+          className="text-center mb-8 sm:mb-12 lg:mb-16"
         >
           <h2 className="heading-section">Projects</h2>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+        <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
           {projects.map((project, index) => (
             <motion.article
               key={project.title}
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group bg-card p-6 lg:p-8 rounded-xl border border-border card-hover cursor-pointer"
+              className="group bg-card p-5 sm:p-6 lg:p-8 rounded-xl border border-border card-hover cursor-pointer"
             >
-              <div className="flex items-start justify-between mb-4">
-                <h3 className="text-xl font-semibold font-sans pr-4">{project.title}</h3>
-                <ArrowUpRight className="w-5 h-5 text-muted-foreground flex-shrink-0 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+              <div className="flex items-start justify-between mb-3 sm:mb-4">
+                <h3 className="text-lg sm:text-xl font-semibold font-sans pr-3 sm:pr-4">{project.title}</h3>
+                <ArrowUpRight className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground flex-shrink-0 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
               </div>
-              <p className="text-body mb-6">{project.description}</p>
+              <p className="text-body mb-4 sm:mb-6">{project.description}</p>
               <div className="flex flex-wrap gap-2">
                 {project.tech.map((tech) => (
                   <span
