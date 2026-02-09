@@ -5,16 +5,24 @@ import { Briefcase } from "lucide-react";
 
 const experiences = [
   {
+    title: "GenAI Fullstack Engineer",
+    company: "GenAIKit Software Solution Private Limited",
+    location: "Remote",
+    period: "Jan 2025 – Present",
+    highlights: [
+      "Built GenAI APIs with FastAPI for agent workflows, RAG pipelines, sandboxed code execution, and multimodal features",
+      "Developed Agentic RAG using LangGraph with routing across LLMs, web search, PDF/OCR RAG, query rewriting, and reranking",
+      "Created a coding agent and prompt-to-Next.js generator using Azure OpenAI and E2B sandbox, plus fine-tuned LLM/VLM models with LoRA/QLoRA",
+    ],
+  },
+  {
     title: "GenAI Engineer Intern",
     company: "GenAIKit Software Solution Private Limited",
     location: "Remote",
-    period: "Apr 2025 – Present",
+    period: "Jan 2024 – Dec 2024",
     highlights: [
-      "Built GenAI APIs using FastAPI for RAG pipelines, agent workflows, and multimodal features",
-      "Worked on agentic RAG systems with routing across LLM responses, web search, PDF RAG, and OCR-based RAG",
-      "Built coding agents and website generators using Azure OpenAI and E2B sandbox",
-      "Fine-tuned LLMs and VLMs using Unsloth and Hugging Face with LoRA/QLoRA",
-      "Built real-time voice AI systems and AI-powered automation tools",
+      "Implemented backend FastAPI services and RAG pipelines for multimodal AI workflows",
+      "Worked on LangGraph routing, web/PDF/OCR retrieval, and assisted in LLM/VLM fine-tuning using Hugging Face + Unsloth",
     ],
   },
 ];

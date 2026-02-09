@@ -18,16 +18,16 @@ export function AboutSection() {
           >
             <h2 className="heading-section">About Me</h2>
           </motion.div>
-          
+
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <blockquote className="text-body-large leading-relaxed">
-              "I'm a GenAI Engineer Intern at GenAIKit Software Solution Private Limited. 
-              I work mainly on backend AI systems using FastAPI, focusing on retrieval-augmented 
-              generation, agent-based workflows, and voice-enabled AI applications. I enjoy 
+              "I'm a GenAI Fullstack Engineer at GenAIKit Software Solution Private Limited.
+              I work mainly on backend AI systems using FastAPI, focusing on retrieval-augmented
+              generation, agent-based workflows, and voice-enabled AI applications. I enjoy
               building practical AI systems that are reliable, scalable, and easy to integrate."
             </blockquote>
           </motion.div>
